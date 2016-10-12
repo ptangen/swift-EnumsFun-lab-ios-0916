@@ -17,5 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var flipCardButton: UIButton!
 
     @IBAction func flipCard(_ sender: UIButton) {
+        GameEngine(player1: "Bill", player2: "Mary")
     }
 }

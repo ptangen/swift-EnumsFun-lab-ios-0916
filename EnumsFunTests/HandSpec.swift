@@ -22,8 +22,8 @@ class HandSpec: QuickSpec {
             let suit1 = Suit(rawValue: "♥️")!
             let suit2 = Suit(rawValue: "♠️")!
 
-            let card1 = Card(rank: rank1, suit: suit1)
-            let card2 = Card(rank: rank2, suit: suit2)
+            let card1 = Card(suit: suit1, rank: rank1)
+            let card2 = Card(suit: suit2, rank: rank2)
 
             var hand = Hand(cards: [card1, card2])
 

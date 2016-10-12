@@ -37,8 +37,8 @@ class GameEngineSpec: QuickSpec {
                     let suit1 = Suit(rawValue: "♠️")!
                     let suit2 = Suit(rawValue: "♥️")!
 
-                    let card1 = Card(rank: rank1, suit: suit1)
-                    let card2 = Card(rank: rank2, suit: suit2)
+                    let card1 = Card(suit: suit1, rank: rank1)
+                    let card2 = Card(suit: suit2, rank: rank2)
 
                     let hand1 = Hand(cards: [card1])
                     let hand2 = Hand(cards: [card2])
@@ -56,7 +56,7 @@ class GameEngineSpec: QuickSpec {
                     let rank2 = Rank(rawValue: 10)!
                     let suit2 = Suit(rawValue: "♠️")!
 
-                    let card2 = Card(rank: rank2, suit: suit2)
+                    let card2 = Card(suit: suit2, rank: rank2)
 
                     let hand1 = Hand(cards: [])
                     let hand2 = Hand(cards: [card2])
@@ -75,8 +75,8 @@ class GameEngineSpec: QuickSpec {
                 it("awards cards to a player") {
                     let rank1 = Rank(rawValue: 10)!
                     let suit1 = Suit(rawValue: "♠️")!
-                    let card1 = Card(rank: rank1, suit: suit1)
-                    gameEngine.award(cards: [card1], to: gameEngine.player1)
+                    let card1 = Card(suit: suit1, rank: rank1)
+                    gameEngine.award(cards: [card1], player: gameEngine.player1)
                     expect(gameEngine.player1.hand.size).to(equal(27))
                     expect(gameEngine.player2.hand.size).to(equal(26))
                 }
